@@ -53,10 +53,8 @@ const styles = StyleSheet.create({
     container: {
       backgroundColor: COLORS.bg,
       flex: 1,
-      
-      justifyContent: "center",
       paddingHorizontal: SIZES.small + 10,
-      paddingTop:SIZES.small+50
+      paddingTop:SIZES.small
     },
    text:{
     color:'white',
@@ -67,7 +65,7 @@ const styles = StyleSheet.create({
    },
    user:{
 paddingVertical:20,
-marginTop:50
+marginTop:SIZES.small
    },
    userInfo:{
 flexDirection:"row",
