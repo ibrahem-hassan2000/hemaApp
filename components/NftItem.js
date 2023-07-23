@@ -10,10 +10,14 @@ import {
 import { COLORS, FONTS, SIZES } from "../constants";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+
 function NftItem({ data }) {
+const navigation = useNavigation();
+ 
   const [love, setLove] = useState(false);
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=>navigation.navigate('itemDetails',{data})}>
       <SafeAreaView style={styles.container}>
         <TouchableOpacity>
           <Image source={data.image} style={styles.mainimage} />

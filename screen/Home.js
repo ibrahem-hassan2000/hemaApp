@@ -24,7 +24,8 @@ function Home() {
 <View style={styles.userInfo}>
     <Image source={avatar} style={styles.imageUser}/>
    <View>
-   <Text style={styles.userName}>IBRAHEM HASSAN</Text>
+    
+   <Text style={styles.userName}>IBRAHEM HASSAN </Text>
    <Text style={styles.SipUserName}>CREATOR</Text>
    </View>
 </View>
@@ -40,10 +41,15 @@ function Home() {
   />
 </View>
 </View>
-
+ 
         </View>
        <View>
+        {
+          data.length?
         <FlatList data={data} renderItem={({item})=> <NftItem data={item}/>} keyExtractor={(item)=> item.id} />
+        :
+        <Text style={{textAlign:'center',color:COLORS.white,fontSize:SIZES.medium+4,fontFamily:FONTS.semiBold}}>NO DATA HERE</Text>
+        }
        </View>
        
     </SafeAreaView>
